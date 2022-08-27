@@ -4,15 +4,40 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{07625B3F-7CDC-4C5A-95AF-0B8DE8D188BE}</ProjectGuid>
+    <ProjectGuid>{501FE1C2-B389-4A43-A542-DD70B4F33AB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Wor_Papers_Clip.My.MyApplication</StartupObject>
-    <RootNamespace>Wor_Papers_Clip</RootNamespace>
+    <StartupObject>Wor_PapersClip.My.MyApplication</StartupObject>
+    <RootNamespace>Wor_PapersClip</RootNamespace>
     <AssemblyName>WorPapersClip</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\Worcome\Desktop\Wor PapersClip\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl></SupportUrl>
+    <ErrorReportUrl></ErrorReportUrl>
+    <TargetCulture>es</TargetCulture>
+    <ProductName>Wor PapersClip</ProductName>
+    <PublisherName>Worcome Studios</PublisherName>
+    <SuiteName>Worcome Apps</SuiteName>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>30.09.20.19</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,10 +71,35 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PapersClip.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>41076DCF28C8D1C36A0EA8260BB8B08BB8E55F25</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Wor PapersClip_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\..\..\..\Downloads\FastColoredTextBox-master\Binary\FastColoredTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -70,6 +120,50 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppHelper.designer.vb">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService.vb" />
+    <Compile Include="AppSupport.designer.vb">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppSupport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppUpdate.designer.vb">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClipStory.Designer.vb">
+      <DependentUpon>ClipStory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClipStory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotKey.Designer.vb">
+      <DependentUpon>HotKey.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HotKey.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -85,16 +179,49 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ScreenShots.Designer.vb">
+      <DependentUpon>ScreenShots.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenShots.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppHelper.resx">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSupport.resx">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppUpdate.resx">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClipStory.resx">
+      <DependentUpon>ClipStory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotKey.resx">
+      <DependentUpon>HotKey.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScreenShots.resx">
+      <DependentUpon>ScreenShots.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -104,6 +231,20 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Worcome Corp PLN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PapersClip.ico" />
+    <None Include="Resources\SistemTrail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

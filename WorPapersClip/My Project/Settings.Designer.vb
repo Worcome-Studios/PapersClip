@@ -53,6 +53,162 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("17")>  _
+        Public Property HK_Diferencial_1() As Integer
+            Get
+                Return CType(Me("HK_Diferencial_1"),Integer)
+            End Get
+            Set
+                Me("HK_Diferencial_1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("12")>  _
+        Public Property HK_Diferencial_2() As Integer
+            Get
+                Return CType(Me("HK_Diferencial_2"),Integer)
+            End Get
+            Set
+                Me("HK_Diferencial_2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("16")>  _
+        Public Property HK_Diferencial_3() As Integer
+            Get
+                Return CType(Me("HK_Diferencial_3"),Integer)
+            End Get
+            Set
+                Me("HK_Diferencial_3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1_3_C")>  _
+        Public Property HK_Diferencial_ONWORK() As String
+            Get
+                Return CType(Me("HK_Diferencial_ONWORK"),String)
+            End Get
+            Set
+                Me("HK_Diferencial_ONWORK") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("17")>  _
+        Public Property HK_1() As Integer
+            Get
+                Return CType(Me("HK_1"),Integer)
+            End Get
+            Set
+                Me("HK_1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("16")>  _
+        Public Property HK_2() As Integer
+            Get
+                Return CType(Me("HK_2"),Integer)
+            End Get
+            Set
+                Me("HK_2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("67")>  _
+        Public Property HK_3() As Integer
+            Get
+                Return CType(Me("HK_3"),Integer)
+            End Get
+            Set
+                Me("HK_3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property OfflineMode() As Boolean
+            Get
+                Return CType(Me("OfflineMode"),Boolean)
+            End Get
+            Set
+                Me("OfflineMode") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Screenshots_directory() As String
+            Get
+                Return CType(Me("Screenshots_directory"),String)
+            End Get
+            Set
+                Me("Screenshots_directory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Screenshots_NameFormat() As String
+            Get
+                Return CType(Me("Screenshots_NameFormat"),String)
+            End Get
+            Set
+                Me("Screenshots_NameFormat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Screenshots_IsEnabled() As Boolean
+            Get
+                Return CType(Me("Screenshots_IsEnabled"),Boolean)
+            End Get
+            Set
+                Me("Screenshots_IsEnabled") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute(".jpg")>  _
+        Public Property Screenshots_Format() As String
+            Get
+                Return CType(Me("Screenshots_Format"),String)
+            End Get
+            Set
+                Me("Screenshots_Format") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property ClipStory_IsEnabled() As Boolean
+            Get
+                Return CType(Me("ClipStory_IsEnabled"),Boolean)
+            End Get
+            Set
+                Me("ClipStory_IsEnabled") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -64,9 +220,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Wor_Papers_Clip.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Wor_PapersClip.My.MySettings
             Get
-                Return Global.Wor_Papers_Clip.My.MySettings.Default
+                Return Global.Wor_PapersClip.My.MySettings.Default
             End Get
         End Property
     End Module
